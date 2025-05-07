@@ -10,21 +10,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Unidad 6</title>
-    <link rel="stylesheet" type="text/css" href="WebApp-1.css"/>
+    <%--<link rel="stylesheet" type="text/css" href="WebApp-1.css"/>--%>
 </head>
 <body>
   <h1>Grid View</h1>
 
   <form id="form1" runat="server">
       <div>
-        <asp:GridView ID="gridLibros" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" CssClass="gridLibros">
-          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+        <asp:GridView ID="gridLibros" runat="server" AutoGenerateColumns="False" AutoGenerateSelectButton="True" OnSelectedIndexChanging="gridLibros_SelectedIndexChanging">
           <%-- Columnas --%>
           <Columns>
             <%-- Columna: LIBRO ID --%>
             <asp:TemplateField HeaderText="Libro (ID)">
               <ItemTemplate>
-                <asp:Label ID="itemTemplate_IDTema" runat="server" Text='<%# Bind("IdTema") %>'></asp:Label>
+                <asp:Label ID="itemTemplate_IDLibro" runat="server" Text='<%# Bind("IdLibro") %>'></asp:Label>
               </ItemTemplate>
             </asp:TemplateField>
             <%-- Columna: TEMA ID --%>
@@ -42,7 +41,7 @@
             <%-- Columna: PRECIO--%>
             <asp:TemplateField HeaderText="Precio">
               <ItemTemplate>
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="itemTemplate_Precio" runat="server" Text='<%# Bind("Precio") %>'></asp:Label>
               </ItemTemplate>
             <%-- Columna: AUTOR--%>
             </asp:TemplateField>
@@ -52,18 +51,9 @@
               </ItemTemplate>
             </asp:TemplateField>
           </Columns>
-          <EditRowStyle BackColor="#999999" />
-          <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-          <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-          <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-          <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-          <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-          <SortedAscendingCellStyle BackColor="#E9E7E2" />
-          <SortedAscendingHeaderStyle BackColor="#506C8C" />
-          <SortedDescendingCellStyle BackColor="#FFFDF8" />
-          <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
-
+        <hr />
+        <asp:Label ID="lblRowSelected" runat="server" Text=""></asp:Label>
       </div>
   </form>
 </body>

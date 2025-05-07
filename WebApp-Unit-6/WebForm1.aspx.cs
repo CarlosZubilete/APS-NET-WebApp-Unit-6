@@ -20,5 +20,33 @@ namespace WebApp_Unit_6
         gridLibros.DataBind();
       }
     }
+
+    protected void gridLibros_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+    {
+      string respuesta;
+
+      string fielSelected;
+      fielSelected = ((Label)gridLibros.Rows[e.NewSelectedIndex].FindControl("itemTemplate_IDLibro")).Text;      
+      respuesta = $"Usted seleccion: Libro (ID = {fielSelected})";
+
+
+      fielSelected = ((Label)gridLibros.Rows[e.NewSelectedIndex].FindControl("itemTemplate_IDTema")).Text;
+      respuesta += $" - Tema (ID = {fielSelected})";
+
+
+      fielSelected = ((Label)gridLibros.Rows[e.NewSelectedIndex].FindControl("itemTemplate_Titulo")).Text;
+      respuesta += $" - Titulo = {fielSelected}";
+
+      fielSelected = ((Label)gridLibros.Rows[e.NewSelectedIndex].FindControl("itemTemplate_Precio")).Text;
+      respuesta += $" - Precio = {fielSelected}";
+
+
+      fielSelected = ((Label)gridLibros.Rows[e.NewSelectedIndex].FindControl("itemTemplate_Autor")).Text;
+      respuesta += $" - Autor = {fielSelected}";
+
+      lblRowSelected.Text = respuesta;
+
+
+    }
   }
 }
