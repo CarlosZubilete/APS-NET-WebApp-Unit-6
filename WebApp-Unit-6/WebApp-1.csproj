@@ -72,6 +72,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection\DataAccess.cs" />
+    <Compile Include="Connection\HandleLibros.cs" />
+    <Compile Include="Connection\Libro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

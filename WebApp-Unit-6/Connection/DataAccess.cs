@@ -48,20 +48,19 @@ namespace WebApp_Unit_6.Connection
     // execute le procedimiento alamcenado , retorna un entero 
     public int executeNoQuery(SqlCommand command , string querySql)
     {
-      int changeRows;
-      SqlConnection _connection = getConnection(); 
-      SqlCommand _commad = new SqlCommand();
-      _commad = command;
-      _commad.Connection = _connection;
-
-      _commad.CommandType = CommandType.StoredProcedure; // Indico el tipo de procedimiento
-      _commad.CommandText = querySql; // Nombre del procedimiento o query
-      changeRows = _commad.ExecuteNonQuery(); // Ejecuto el procedimiento 
-      _connection.Close();
-      return changeRows;
-
-
       /*
+        int changeRows;
+        SqlConnection _connection = getConnection(); 
+        SqlCommand _commad = new SqlCommand();
+        _commad = command;
+        _commad.Connection = _connection;
+
+        _commad.CommandType = CommandType.StoredProcedure; // Indico el tipo de procedimiento
+        _commad.CommandText = querySql; // Nombre del procedimiento o query
+        changeRows = _commad.ExecuteNonQuery(); // Ejecuto el procedimiento 
+        _connection.Close();
+        return changeRows;
+      */
         using (SqlConnection _connection = getConnection())
         {
             using (SqlCommand _commad = command)
@@ -73,7 +72,6 @@ namespace WebApp_Unit_6.Connection
             }
         }
 
-       */
     }
   }
 }
