@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Data.SqlClient;
-// using System.Data.CommandType;
+
 
 namespace WebApp_Unit_6.Connection
 {
