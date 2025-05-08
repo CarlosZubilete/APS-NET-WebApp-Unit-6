@@ -8,6 +8,11 @@ namespace WebApp_Unit_6.Connection
   public class Libro
   {
     public Libro() { } // Contructor default
+    
+    public Libro (int idLibro)
+    {
+      _idLibro = idLibro;
+    }
     public Libro(int idLibro, int idTema, string titulo, decimal precio, string autor)
     {
       _idLibro = idLibro;

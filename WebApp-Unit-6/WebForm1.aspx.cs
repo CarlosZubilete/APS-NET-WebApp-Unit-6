@@ -15,12 +15,16 @@ namespace WebApp_Unit_6
     {
       if (!Page.IsPostBack)
       {
-        HandleLibros handleLibros = new HandleLibros();
-        gridLibros.DataSource = handleLibros.getAllBooks();
-        gridLibros.DataBind();
+        this.loadGrid();
       }
     }
 
+    private void loadGrid()
+    {
+      HandleLibros handleLibros = new HandleLibros();
+      gridLibros.DataSource = handleLibros.getAllBooks();
+      gridLibros.DataBind();
+    }
     protected void gridLibros_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
     {
       string respuesta;
@@ -45,6 +49,26 @@ namespace WebApp_Unit_6
       respuesta += $" - Autor = {fielSelected}";
 
       lblRowSelected.Text = respuesta;
+
+
+    }
+
+    protected void gridLibros_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+      string idlibroSelected;
+      // First , I find a index of the identificator for deteled
+      idlibroSelected = ((Label)gridLibros.Rows[e.RowIndex].FindControl("itemTemplate_IDLibro")).Text;
+
+      // Create a instance Lirbro: 
+      Libro libro = new Libro(Convert.ToInt32(idlibroSelected));
+
+      // Create a instance HandleLibro:
+      HandleLibros handleLibros = new HandleLibros();
+      handleLibros.DeleteLibro(libro);
+
+      // Upload Grid
+      this.loadGrid();
+      
 
 
     }
