@@ -68,9 +68,15 @@ namespace WebApp_Unit_6
 
       // Upload Grid
       this.loadGrid();
-      
-
 
     }
+
+    protected void gridLibros_RowEditing(object sender, GridViewEditEventArgs e)
+    {
+      gridLibros.EditIndex = e.NewEditIndex;
+      this.loadGrid();
+    }
+
+
   }
 }
