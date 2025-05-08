@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using WebApp_Unit_6.Connection; // exportamos la carpeta
 
 namespace WebApp_Unit_6
@@ -143,6 +144,53 @@ namespace WebApp_Unit_6
         //Convert.ToInt32(Application["countClick"]) += 1; 
         Application["countClick"] = Convert.ToInt32(Application["countClick"]) + 1; 
       }
+    }
+
+    protected void btnAddData_Click(object sender, EventArgs e)
+    {
+      // is thre a Sesion variable
+      if(Session["Table"] == null)
+      {
+        Session["Table"] = this.CreateTable(); 
+      }
+      else
+      {
+        this.AddRegister((DataTable)Session["Table"], txtBoxCountry.Text, txtBoxCity.Text);
+        this.CleanControl();
+      }
+    
+    }
+
+    private DataTable CreateTable()
+    {
+      // Create a Object Table
+      DataTable table = new DataTable();
+      // Create a Object Column
+      DataColumn column = new DataColumn("Country", System.Type.GetType("System.String"));
+      // Add column to table
+      table.Columns.Add(column);
+
+      column = new DataColumn("City", System.Type.GetType("System.String"));
+      table.Columns.Add(column);
+
+      return table;
+    }
+    
+    private DataTable AddRegister(DataTable dataTable, string country, string city)
+    {
+      DataRow row = dataTable.NewRow();
+      row["Country"] = country;
+      row["City"] = city;
+
+      dataTable.Rows.Add(row);
+
+      return dataTable;
+    }
+    
+    private void CleanControl()
+    {// Only clean controls about 'AddRegister'
+      txtBoxCountry.Text = String.Empty;
+      txtBoxCity.Text = String.Empty;
     }
   }
 }

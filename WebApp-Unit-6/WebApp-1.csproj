@@ -70,6 +70,7 @@
     <Content Include="Web.config" />
     <Content Include="WebApp-1.css" />
     <Content Include="WebApp-2.aspx" />
+    <Content Include="WebApp-3.aspx" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +84,13 @@
     </Compile>
     <Compile Include="WebApp-2.aspx.designer.cs">
       <DependentUpon>WebApp-2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApp-3.aspx.cs">
+      <DependentUpon>WebApp-3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebApp-3.aspx.designer.cs">
+      <DependentUpon>WebApp-3.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

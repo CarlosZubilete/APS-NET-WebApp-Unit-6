@@ -115,16 +115,30 @@
         </div>
 
         <hr />
-        <%-- VARIBLE APLICACION --%>
+        <asp:HyperLink ID="linkCountClick" runat="server" NavigateUrl="~/WebApp-2.aspx">WEB APP - 2</asp:HyperLink>
+         <%-- VARIBLE APLICACION --%>
         <h3>Variable Aplicacion</h3>
         <div class="contenedor_variableApp">
           <span>Contador click
            <asp:Button runat="server" ID="btnCountClick" Text="Contar" OnClick="btnCountClick_Click"/> 
           </span>
           <br />
-          <asp:HyperLink ID="linkCountClick" runat="server" NavigateUrl="~/WebApp-2.aspx">WEB APP - 2</asp:HyperLink>
         </div>
-        
+        <hr />
+        <asp:HyperLink ID="linkAddData" runat="server" NavigateUrl="~/WebApp-3.aspx">WEB APP - 3</asp:HyperLink>
+      <%-- VARIABLE DATA --%>
+        <h3>Variable Data</h3>
+        <div class="contenedor_varaibleDarta">
+          <span>Ingrese su Pais: 
+            <asp:TextBox runat="server" ID="txtBoxCountry"></asp:TextBox>
+          </span>
+          <br />
+          <span>Ingrese su Ciudad
+            <asp:TextBox runat="server" ID="txtBoxCity"></asp:TextBox>
+          </span>
+          <br />
+         <asp:Button runat="server" ID="btnAddData" text="Agregar" OnClick="btnAddData_Click"/>
+        </div>
       </div>
   </form>
 </body>

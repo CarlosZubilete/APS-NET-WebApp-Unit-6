@@ -60,6 +60,15 @@ namespace WebApp_Unit_6
     protected global::System.Web.UI.WebControls.Button btnSend;
 
     /// <summary>
+    /// linkCountClick control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.HyperLink linkCountClick;
+
+    /// <summary>
     /// btnCountClick control.
     /// </summary>
     /// <remarks>
@@ -69,12 +78,39 @@ namespace WebApp_Unit_6
     protected global::System.Web.UI.WebControls.Button btnCountClick;
 
     /// <summary>
-    /// linkCountClick control.
+    /// linkAddData control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.HyperLink linkCountClick;
+    protected global::System.Web.UI.WebControls.HyperLink linkAddData;
+
+    /// <summary>
+    /// txtBoxCountry control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox txtBoxCountry;
+
+    /// <summary>
+    /// txtBoxCity control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox txtBoxCity;
+
+    /// <summary>
+    /// btnAddData control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnAddData;
   }
 }
