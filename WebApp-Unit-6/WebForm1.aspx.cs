@@ -100,5 +100,26 @@ namespace WebApp_Unit_6
       this.loadGrid();
       
     }
+
+    protected void gridLibros_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+      gridLibros.PageIndex = e.NewPageIndex;
+      this.loadGrid();
+    }
+
+    protected void gridLibros_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+      if(e.CommandName == "buyEnvent")
+      {
+        // Get the row of the grid.
+        int row = Convert.ToInt32(e.CommandArgument);
+
+        string title = ((Label)gridLibros.Rows[row].FindControl("itemTemplate_Titulo")).Text;
+
+        string price = ((Label)gridLibros.Rows[row].FindControl("itemTemplate_Precio")).Text;
+
+        lblRowSelected.Text = $"Compó '{title}' . Precio ${price}";
+      }
+    }
   }
 }
