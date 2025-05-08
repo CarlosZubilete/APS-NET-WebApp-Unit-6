@@ -121,5 +121,28 @@ namespace WebApp_Unit_6
         lblRowSelected.Text = $"Compó '{title}' . Precio ${price}";
       }
     }
+    /// SECTOR VARIABLE SESION
+    protected void btnSend_Click(object sender, EventArgs e)
+    {
+      // Declarate a sesion Variable
+      Session["nameUser"] = txtBoxNameUser.Text;
+      // Send a information towards the othe form
+      Server.Transfer("WebApp-2.aspx");
+    }
+
+    protected void btnCountClick_Click(object sender, EventArgs e)
+    {
+      // is there a Application variable ? 
+      if (Application["countClick"] == null)
+      {
+        // Create and init
+        Application["countClick"] = 1;
+      }
+      else
+      {
+        //Convert.ToInt32(Application["countClick"]) += 1; 
+        Application["countClick"] = Convert.ToInt32(Application["countClick"]) + 1; 
+      }
+    }
   }
 }

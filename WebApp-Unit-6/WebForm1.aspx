@@ -101,8 +101,30 @@
           <SortedDescendingCellStyle BackColor="#FFFDF8" />
           <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
+
         <hr />
         <asp:Label ID="lblRowSelected" runat="server" Text=""></asp:Label>
+        <hr />
+
+        <%-- VARIABLE SESION --%>
+        <h3>Variable Sesion</h3>
+        <div class="contenedor_variableSesion">
+          <span>Ingrese sus nonbre: </span>
+           <asp:TextBox runat="server" ID="txtBoxNameUser"></asp:TextBox>
+           <asp:Button runat="server" ID="btnSend" Text="Enviar" OnClick="btnSend_Click"/> 
+        </div>
+
+        <hr />
+        <%-- VARIBLE APLICACION --%>
+        <h3>Variable Aplicacion</h3>
+        <div class="contenedor_variableApp">
+          <span>Contador click
+           <asp:Button runat="server" ID="btnCountClick" Text="Contar" OnClick="btnCountClick_Click"/> 
+          </span>
+          <br />
+          <asp:HyperLink ID="linkCountClick" runat="server" NavigateUrl="~/WebApp-2.aspx">WEB APP - 2</asp:HyperLink>
+        </div>
+        
       </div>
   </form>
 </body>

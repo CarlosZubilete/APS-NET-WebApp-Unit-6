@@ -11,7 +11,7 @@ namespace WebApp_Unit_6
 {
 
 
-  public partial class WebForm1
+  public partial class WebApp_2
   {
 
     /// <summary>
@@ -24,57 +24,30 @@ namespace WebApp_Unit_6
     protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
     /// <summary>
-    /// gridLibros control.
+    /// lblShow control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.GridView gridLibros;
+    protected global::System.Web.UI.WebControls.Label lblShow;
 
     /// <summary>
-    /// lblRowSelected control.
+    /// lblCountResult control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Label lblRowSelected;
+    protected global::System.Web.UI.WebControls.Label lblCountResult;
 
     /// <summary>
-    /// txtBoxNameUser control.
+    /// linkCoutClick control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox txtBoxNameUser;
-
-    /// <summary>
-    /// btnSend control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Button btnSend;
-
-    /// <summary>
-    /// btnCountClick control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.Button btnCountClick;
-
-    /// <summary>
-    /// linkCountClick control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.HyperLink linkCountClick;
+    protected global::System.Web.UI.WebControls.HyperLink linkCoutClick;
   }
 }
