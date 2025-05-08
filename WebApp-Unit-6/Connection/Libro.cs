@@ -13,6 +13,13 @@ namespace WebApp_Unit_6.Connection
     {
       _idLibro = idLibro;
     }
+    public Libro(int idLibro, string titulo, decimal precio, string autor)
+    {
+      _idLibro = idLibro;
+      _tittulo = titulo;
+      _precio = precio;
+      _autor = autor;
+    }
     public Libro(int idLibro, int idTema, string titulo, decimal precio, string autor)
     {
       _idLibro = idLibro;
