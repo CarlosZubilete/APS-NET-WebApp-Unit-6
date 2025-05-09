@@ -8,16 +8,26 @@
 </head>
 <body>
   <h3>Web APP - 3</h3>
+      <asp:HyperLink ID="linkCoutClick" runat="server" NavigateUrl="~/WebForm1.aspx">Wep-app-1</asp:HyperLink>
     <form id="form1" runat="server">
-        
+      <%-- GRID TABLA --%>
       <div>         
         <asp:GridView ID="gridCountries" runat="server">
         </asp:GridView>
        </div>
-
       <asp:Button runat="server" ID="btnDelete" Text="Eliminar Tabla" OnClick="btnDelete_Click"/>
       <br />
-      <asp:HyperLink ID="linkCoutClick" runat="server" NavigateUrl="~/WebForm1.aspx">Wep-app-1</asp:HyperLink>
+      <hr />
+      <h3>Información de COOKIES (Usuario)</h3>
+      <span>Usuario:
+        <asp:Label Text="" runat="server" ID="lblUser"/>
+      </span>
+      <br />
+      <span>Password:
+        <asp:Label Text="" runat="server" ID="lblPassword"/>
+      </span>
+      <hr />
+      <asp:Button Text="Eliminar Usuario" runat="server" ID="btnDeleteCookie" OnClick="btnDeleteCookie_Click"/>
     </form>
 </body>
 </html>

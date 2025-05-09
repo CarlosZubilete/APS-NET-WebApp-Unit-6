@@ -15,6 +15,15 @@ namespace WebApp_Unit_6
   {
 
     /// <summary>
+    /// linkCoutClick control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.HyperLink linkCoutClick;
+
+    /// <summary>
     /// form1 control.
     /// </summary>
     /// <remarks>
@@ -42,12 +51,30 @@ namespace WebApp_Unit_6
     protected global::System.Web.UI.WebControls.Button btnDelete;
 
     /// <summary>
-    /// linkCoutClick control.
+    /// lblUser control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.HyperLink linkCoutClick;
+    protected global::System.Web.UI.WebControls.Label lblUser;
+
+    /// <summary>
+    /// lblPassword control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Label lblPassword;
+
+    /// <summary>
+    /// btnDeleteCookie control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnDeleteCookie;
   }
 }

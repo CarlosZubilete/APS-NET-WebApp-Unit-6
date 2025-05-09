@@ -189,5 +189,26 @@ namespace WebApp_Unit_6
       txtBoxCountry.Text = string.Empty;
       txtBoxCity.Text = string.Empty;
     }
+
+    protected void btnInitSesion_Click(object sender, EventArgs e)
+    {
+      // Declatare a variable Cookie
+      HttpCookie cookie = new HttpCookie("User",txtBoxUser.Text);
+      // Add how long the cookie will be on the page.
+      cookie.Expires = DateTime.Now.AddSeconds(60);
+      // Add cookie at the server
+      this.Response.Cookies.Add(cookie);
+
+      // Another way to do the same: 
+      this.Response.Cookies["Password"].Value = txtBoxPassword.Text;
+      this.Response.Cookies["Password"].Expires = DateTime.Now.AddSeconds(60);
+
+
+
+      Server.Transfer("WebApp-3.aspx");
+    }
+
+    // TODO : Bad declate name Variable, we have two variables 
+    // 'txtUserName' and 'txtUser' , check out! 
   }
 }

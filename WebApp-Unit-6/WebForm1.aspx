@@ -139,6 +139,21 @@
           <br />
          <asp:Button runat="server" ID="btnAddData" text="Agregar" OnClick="btnAddData_Click"/>
         </div>
+        <hr />
+        <%-- VARIABLE COCKIE --%>
+        <h1>Variable Cockie</h1>
+        <div class="contenedor_variableCockie">
+          <span>Usurio:
+            <asp:TextBox runat="server" ID="txtBoxUser"></asp:TextBox>
+          </span>
+          <br />
+          <span>Contraseña:
+            <asp:TextBox runat="server" ID="txtBoxPassword"></asp:TextBox>
+          </span>
+          <br />
+          <asp:Button Text="Iniciar Sesion" runat="server" ID="btnInitSesion" OnClick="btnInitSesion_Click"/>
+        </div>
+        
       </div>
   </form>
 </body>
