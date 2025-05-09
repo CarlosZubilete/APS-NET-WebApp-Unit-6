@@ -126,14 +126,14 @@
         </div>
         <hr />
         <asp:HyperLink ID="linkAddData" runat="server" NavigateUrl="~/WebApp-3.aspx">WEB APP - 3</asp:HyperLink>
-      <%-- VARIABLE DATA --%>
-        <h3>Variable Data</h3>
+      <%-- VARIABLE Sesion whit DATA --%>
+        <h3>Variable Sesion con Data</h3>
         <div class="contenedor_varaibleDarta">
-          <span>Ingrese su Pais: 
+          <span> Pais: 
             <asp:TextBox runat="server" ID="txtBoxCountry"></asp:TextBox>
           </span>
           <br />
-          <span>Ingrese su Ciudad
+          <span>Ciudad:
             <asp:TextBox runat="server" ID="txtBoxCity"></asp:TextBox>
           </span>
           <br />

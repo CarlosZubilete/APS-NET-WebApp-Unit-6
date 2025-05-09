@@ -153,12 +153,9 @@ namespace WebApp_Unit_6
       {
         Session["Table"] = this.CreateTable(); 
       }
-      else
-      {
-        this.AddRegister((DataTable)Session["Table"], txtBoxCountry.Text, txtBoxCity.Text);
-        this.CleanControl();
-      }
-    
+
+      this.AddRegister((DataTable)Session["Table"], txtBoxCountry.Text, txtBoxCity.Text);
+      this.CleanControl();   
     }
 
     private DataTable CreateTable()
@@ -189,8 +186,8 @@ namespace WebApp_Unit_6
     
     private void CleanControl()
     {// Only clean controls about 'AddRegister'
-      txtBoxCountry.Text = String.Empty;
-      txtBoxCity.Text = String.Empty;
+      txtBoxCountry.Text = string.Empty;
+      txtBoxCity.Text = string.Empty;
     }
   }
 }

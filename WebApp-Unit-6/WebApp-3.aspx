@@ -15,7 +15,7 @@
         </asp:GridView>
        </div>
 
-      <asp:Button runat="server" ID="btnDelete" Text="Eliminar Tabla"/>
+      <asp:Button runat="server" ID="btnDelete" Text="Eliminar Tabla" OnClick="btnDelete_Click"/>
       <br />
       <asp:HyperLink ID="linkCoutClick" runat="server" NavigateUrl="~/WebForm1.aspx">Wep-app-1</asp:HyperLink>
     </form>

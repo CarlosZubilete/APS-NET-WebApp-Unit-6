@@ -21,5 +21,12 @@ namespace WebApp_Unit_6
         }
       }
     }
+
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+      Session["Table"] = null;
+      gridCountries.DataSource = null;
+      gridCountries.DataBind();
+    }
   }
 }
